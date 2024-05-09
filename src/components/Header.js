@@ -27,6 +27,7 @@ const Header = () => {
       </div>
 
       {/* result for : WORD SEARCHED */}
+      <h3>Result : <span>Cat</span></h3>
       </div>
       </div>
   );
