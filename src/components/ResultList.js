@@ -49,7 +49,6 @@ const ResultList = () => {
         <h3 className="font-bold mt-4">Phonetic:</h3>
         <h3 className="font-bold mt-4">Part of Speech:</h3>
         <PartOfSpeech mean={response} />
-        <h3 className="font-bold mt-4">Audio:</h3>
         <h3 className="font-bold mt-4">Meaning:</h3>
         <MeaningList mean={response} />
         <h3 className="font-bold mt-4">Example:</h3>
