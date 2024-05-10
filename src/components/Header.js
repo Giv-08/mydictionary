@@ -1,18 +1,27 @@
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { InputContext } from "../App";
 
 const Header = () => {
 
   const [ value, setValue ] = useState("");
+  const { inputValue, setInputValue } = useContext(InputContext);
   const handleInputChange = event => setValue(event.target.value);
   const handleSubmit = () => {
+    setInputValue(value);
     setValue("");
   }
 
+  const handleInputKeyDown = (event) => {
+    if(event.key === 'Enter') {
+      setInputValue(value);
+      setValue("");
+    }
+  }
   return (
       <div>
         <div className="py-8">
-          <h1 className="text-3xl text-center font-bold underline">
+          <h1 className="text-3xl text-center font-bold">
             My Dictionary
           </h1>
           <p>
@@ -21,13 +30,14 @@ const Header = () => {
 
       <div>
         <div>
-          <input className="px-4 py-2" type="text" placeholder="Search..." onChange={handleInputChange}/>
-          <button onSubmit={handleSubmit}>Search</button>
+          <input className="px-3 py-2 md:w-80 bg-gray-100 text-black" type="text" placeholder="Search..." onChange={handleInputChange} onKeyDown={handleInputKeyDown}/>
+          <button className="bg-blue-400 border-l text-center text-white px-3 py-2" onClick={handleSubmit}>Search</button>
         </div>
       </div>
 
-      {/* result for : WORD SEARCHED */}
-      <h3>Result : <span>Cat</span></h3>
+      { inputValue && (
+      <h3>Result : <span>{inputValue}</span></h3>
+      )}
       </div>
       </div>
   );

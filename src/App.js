@@ -11,11 +11,11 @@ function App() {
   }
 
   return (
-    <inputContext value={value}>
+    <InputContext.Provider value={value}>
     <div className="App">
       <Header />
     </div>
-    </inputContext>
+    </InputContext.Provider>
   );
 }
 
