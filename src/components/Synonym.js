@@ -1,3 +1,4 @@
+
 const Synonym = ({ mean }) => {
   return (
     <div className="columns-2 md:columns-3">
