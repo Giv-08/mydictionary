@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { InputContext } from "../App";
 import axios from "axios";
-import { MeaningList } from "./MeaningList";
+import MeaningList from "./MeaningList";
+import Example from "./Example";
 
 axios.defaults.baseURL = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
@@ -42,9 +43,11 @@ const ResultList = () => {
     <div className="container mx-auto">
       { response && (
       <div>
+        <h3 className="font-bold mt-4">Phonetic:</h3>
         <h3 className="font-bold mt-4">Meaning:</h3>
         <MeaningList mean={response} />
         <h3 className="font-bold mt-4">Example:</h3>
+        <Example mean={response} />
         <h3 className="font-bold mt-4">Synonym:</h3>
         <h3 className="font-bold mt-4">Antonym:</h3>
       </div>
