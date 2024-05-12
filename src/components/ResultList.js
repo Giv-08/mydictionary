@@ -6,6 +6,7 @@ import Example from "./Example";
 import Synonym from "./Synonym";
 import Antonym from "./Antonym";
 import PartOfSpeech from "./PartOfSpeech";
+import Phonetic from "./Phonetic";
 
 axios.defaults.baseURL = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
@@ -47,6 +48,7 @@ const ResultList = () => {
       { response && (
       <div>
         <h3 className="font-bold mt-4">Phonetic:</h3>
+        <Phonetic mean={response} />
         <h3 className="font-bold mt-4">Part of Speech:</h3>
         <PartOfSpeech mean={response} />
         <h3 className="font-bold mt-4">Meaning:</h3>

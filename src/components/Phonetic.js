@@ -1,11 +1,12 @@
 const Phonetic = ({ mean }) => {
   return (
     <div className="columns-2 md:columns-3">
-      {mean.map(val => val.meanings.map( means => {
-        return means.phonetics?.map(syn => (
-          <li>{syn}</li>
-        ))
-}))}
+      {mean.map(val =>
+        <div key={val.phonetic}>
+        <span>{val.phonetic}</span>
+      </div>
+
+)}
     </div>
   );
 };
