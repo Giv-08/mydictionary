@@ -24,14 +24,14 @@ const Header = () => {
           <h1 className="text-3xl text-center font-bold">
             My Dictionary
           </h1>
-          <p>
+          <p className="text-center">
             Make your words meaningful
           </p>
 
       <div>
-        <div>
-          <input className="px-3 py-2 md:w-80 bg-gray-100 text-black" type="text" placeholder="Search..." onChange={handleInputChange} value={value} onKeyDown={handleInputKeyDown}/>
-          <button className="bg-blue-400 border-l text-center text-white px-3 py-2" onClick={handleSubmit}>Search</button>
+        <div className="flex flex-col items-center">
+          <input className="px-3 py-2 md:w-80 bg-gray-100 text-black " type="text" placeholder="Search..." onChange={handleInputChange} value={value} onKeyDown={handleInputKeyDown}/>
+          <button className="bg-green-500 border-l text-center text-white px-3 py-2" onClick={handleSubmit}>Search</button>
         </div>
       </div>
 
