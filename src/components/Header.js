@@ -20,7 +20,7 @@ const Header = () => {
   }
   return (
       <div>
-        <div className="py-8">
+        <div className="bg-amber-500 py-8">
           <h1 className="text-3xl text-center font-bold">
             My Dictionary
           </h1>
