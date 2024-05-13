@@ -5,7 +5,7 @@ import MeaningList from "./MeaningList";
 import Example from "./Example";
 import Synonym from "./Synonym";
 import Antonym from "./Antonym";
-import PartOfSpeech from "./PartOfSpeech";
+// import PartOfSpeech from "./PartOfSpeech";
 import Phonetic from "./Phonetic";
 
 axios.defaults.baseURL = 'https://api.dictionaryapi.dev/api/v2/entries/en';
@@ -36,30 +36,30 @@ const ResultList = () => {
   }, [inputValue])
 
   if(loading) {
-    return <h1 className="py-4 text-center">Loading...</h1>
+    return <h1 className="py-6 text-center text-2xl">Loading...</h1>
   }
 
   if(error) {
-    return <h2 className="text-center">No definition found</h2>
+    return <h2 className="py-6 text-center text-2xl">No definition found</h2>
   }
 
   return (
     <div className="container mx-auto">
       { response && (
       <div>
-        <div className="grid grid-cols-4 py-4">
-          <h3 className="font-bold mt-4 text-center">Phonetic:</h3>
+        {/* <div className="grid grid-cols-4 py-4"> */}
+          <h3 className="text-2xl font-bold mt-4 text-center py-2">Phonetic:</h3>
           <Phonetic mean={response} />
-          <h3 className="font-bold mt-4">Part of Speech:</h3>
-          <PartOfSpeech mean={response} />
-        </div>
-        <h3 className="font-bold mt-4">Meaning:</h3>
+          {/* <h3 className="font-bold mt-4">Part of Speech:</h3>
+          <PartOfSpeech mean={response} /> */}
+        {/* </div> */}
+        <h3 className="text-2xl font-bold mt-4 text-center py-8">Meaning:</h3>
         <MeaningList mean={response} />
-        <h3 className="font-bold mt-4">Example:</h3>
+        <h3 className="text-2xl font-bold mt-4 text-center py-8">Example:</h3>
         <Example mean={response} />
-        <h3 className="font-bold mt-4">Synonym:</h3>
+        <h3 className="text-2xl font-bold mt-4 text-center py-8">Synonym:</h3>
         <Synonym mean={response} />
-        <h3 className="font-bold mt-4">Antonym:</h3>
+        <h3 className="text-2xl font-bold mt-4 text-center py-8">Antonym:</h3>
         <Antonym mean={response} />
       </div>
       )}
