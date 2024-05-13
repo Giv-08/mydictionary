@@ -1,11 +1,10 @@
 const Phonetic = ({ mean }) => {
   return (
-    <div className="columns-2 md:columns-3">
+    <div>
       {mean.map(val =>
-        <div key={val.phonetic}>
-        <span>{val.phonetic[2]}</span>
+        <div className="flex justify-center" key={val.phonetic}>
+        <span>{val.phonetic}</span>
       </div>
-
 )}
     </div>
   );
