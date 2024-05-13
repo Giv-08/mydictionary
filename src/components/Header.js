@@ -30,15 +30,17 @@ const Header = () => {
 
       <div>
         <div className="flex justify-center">
-          <input className="px-3 py-2 md:w-80 bg-gray-100 text-black " type="text" placeholder="Search..." onChange={handleInputChange} value={value} onKeyDown={handleInputKeyDown}/>
-          <button className="bg-green-500 border-l text-center text-white px-3 py-2" onClick={handleSubmit}>Search</button>
+          <input className="rounded-l-lg px-3 py-2 md:w-80 bg-gray-100 text-black " type="text" placeholder="Search..." onChange={handleInputChange} value={value} onKeyDown={handleInputKeyDown}/>
+          <button className="rounded-r-lg bg-green-500 border-l text-center text-white px-3 py-2" onClick={handleSubmit}>Search</button>
         </div>
       </div>
 
-      { inputValue && (
-      <h3 className="py-2 text-center text-2xl">Result : <span className="font-bold">{inputValue}</span></h3>
-      )}
       </div>
+      { inputValue && (
+        <div className="flex justify-center">
+          <h3 className="border-b-2 border-slate-50 w-96 py-2 text-center text-2xl">Result : <span className="font-bold">{inputValue}</span></h3>
+        </div>
+      )}
       </div>
   );
 }

@@ -3,7 +3,7 @@ const Phonetic = ({ mean }) => {
     <div className="columns-2 md:columns-3">
       {mean.map(val =>
         <div key={val.phonetic}>
-        <span>{val.phonetic}</span>
+        <span>{val.phonetic[2]}</span>
       </div>
 
 )}
