@@ -1,7 +1,7 @@
 const PartOfSpeech = ({mean}) => {
   console.log(mean);
   return(
-  <div>
+  <div className="grid grid-cols-3">
     {/* fetch data from array by looping */}
     {mean.map(val => val.meanings.map(means =>
       <div key={means.partOfSpeech}>
@@ -11,5 +11,5 @@ const PartOfSpeech = ({mean}) => {
   </div>
 );
 };
-// <h2>Phonetic {val.phonetic}</h2>
+
 export default PartOfSpeech;
