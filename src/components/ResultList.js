@@ -46,7 +46,7 @@ const ResultList = () => {
   return (
     <div className="container mx-auto">
       { response && (
-      <div>
+      <div className="text-center">
         <h3 className="font-bold mt-4 text-center">Phonetic:</h3>
         <Phonetic mean={response} />
         <h3 className="font-bold mt-4">Part of Speech:</h3>

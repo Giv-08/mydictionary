@@ -5,7 +5,7 @@ const PartOfSpeech = ({mean}) => {
     {/* fetch data from array by looping */}
     {mean.map(val => val.meanings.map(means =>
       <div key={means.partOfSpeech}>
-        <span>{means.partOfSpeech}</span>
+        <li>{means.partOfSpeech}</li>
       </div>
     ))}
   </div>

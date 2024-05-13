@@ -12,6 +12,5 @@ const MeaningList = ({mean}) => {
   </div>
 );
 };
-// <h2>Part of Speech: {means.partOfSpeech}</h2>
-// <h2>Phonetic {val.phonetic}</h2>
+
 export default MeaningList;
