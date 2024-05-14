@@ -21,7 +21,7 @@ const Header = () => {
   return (
       <div>
         <div className="bg-amber-500 py-8">
-          <h1 className="tracking-wider text-3xl text-center font-bold">
+          <h1 className="tracking-wider text-4xl text-center font-bold">
             My Dictionary
           </h1>
           <p className="text-center py-4">
@@ -31,7 +31,7 @@ const Header = () => {
       <div>
         <div className="flex justify-center">
           <input className="rounded-l-lg px-3 py-2 md:w-80 bg-gray-100 text-black " type="text" placeholder="Search..." onChange={handleInputChange} value={value} onKeyDown={handleInputKeyDown}/>
-          <button className="rounded-r-lg bg-green-500 border-l text-center text-white px-3 py-2" onClick={handleSubmit}>Search</button>
+          <button className="rounded-r-lg bg-green-500 border-l text-center text-white px-3 py-2 hover:bg-green-600 transition duration-300 ease-in-out" onClick={handleSubmit}>Search</button>
         </div>
       </div>
 
