@@ -48,18 +48,18 @@ const ResultList = () => {
       { response && (
       <div>
         {/* <div className="grid grid-cols-4 py-4"> */}
-          <h3 className="text-2xl font-bold mt-4 text-center py-2">Phonetic:</h3>
+          <h3 className="text-2xl text-amber-500 font-bold mt-4 text-center py-2">Phonetic:</h3>
           <Phonetic mean={response} />
           {/* <h3 className="font-bold mt-4">Part of Speech:</h3>
           <PartOfSpeech mean={response} /> */}
         {/* </div> */}
-        <h3 className="text-2xl font-bold mt-4 text-center py-8">Meaning:</h3>
+        <h3 className="text-2xl text-amber-500 font-bold mt-4 text-center py-8">Meaning:</h3>
         <MeaningList mean={response} />
-        <h3 className="text-2xl font-bold mt-4 text-center py-8">Example:</h3>
+        <h3 className="text-2xl text-amber-500 font-bold mt-4 text-center py-8">Example:</h3>
         <Example mean={response} />
-        <h3 className="text-2xl font-bold mt-4 text-center py-8">Synonym:</h3>
+        <h3 className="text-2xl text-amber-500 font-bold mt-4 text-center py-8">Synonym:</h3>
         <Synonym mean={response} />
-        <h3 className="text-2xl font-bold mt-4 text-center py-8">Antonym:</h3>
+        <h3 className="text-2xl text-amber-500 font-bold mt-4 text-center py-8">Antonym:</h3>
         <Antonym mean={response} />
       </div>
       )}

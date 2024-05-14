@@ -1,6 +1,6 @@
 const Antonym = ({ mean }) => {
   return (
-    <div className="columns-2 md:columns-3">
+    <div className="columns-2 md:columns-3 mb-10">
       {mean.map(val => val.meanings.map(means => {
         return means.antonyms?.map(anto => (
           <li>{anto}</li>

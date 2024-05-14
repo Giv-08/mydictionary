@@ -38,7 +38,7 @@ const Header = () => {
       </div>
       { inputValue && (
         <div className="flex justify-center">
-          <h3 className="border-b-2 border-slate-50 w-96 py-2 text-center text-2xl">Result : <span className="font-bold">{inputValue}</span></h3>
+          <h3 className="border-b-2 border-slate-50 w-96 py-2 text-center text-2xl">Result : <span className="text-3xl text-green-500 font-bold">{inputValue}</span></h3>
         </div>
       )}
       </div>
