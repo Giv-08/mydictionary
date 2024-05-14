@@ -21,7 +21,7 @@ const Header = () => {
   return (
       <div>
         <div className="bg-amber-500 py-8">
-          <h1 className="text-3xl text-center font-bold">
+          <h1 className="tracking-wider text-3xl text-center font-bold">
             My Dictionary
           </h1>
           <p className="text-center py-4">
